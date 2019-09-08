@@ -1,15 +1,5 @@
-<div class="row">
-	<div class="col-md-12">
-			<a href="#!/books" class="btn btn-primary">Back</a>	
-			<a href="#!/books/edit/{{book._id}}" class="btn btn-primary pull-right">Edit</a>
-			<a href="#" ng-click="deleteBook(book._id)" class="btn btn-primary pull-right">Delete</a>	
-	</div>
-</div>
-
-<div class="panel panel-default" ng-init="getBook()">
-	<div class="panel-heading">
-		<h3 class="panel-title">{{book.title}}</h3>
-	</div>
+<div class="panel panel-default my-4" ng-init="getBook()">
+	
 	<div class="panel-body">
 		<div class="row">
 			<div class="col-md-4">
@@ -17,26 +7,37 @@
 			</div>
 
 			<div class="col-md-8">
+				<div class="panel-heading">
+					<h3 class="panel-title">{{book.title}}</h3>
+				</div>
 				<p>{{book.description}}</p>
 				<ul class="list-group">
 					<li class="list-group-item">
-						Genre: {{book.genre}}	
+						<b>Genre:</b> {{book.genre}}	
 					</li>
 					<li class="list-group-item">
-						Author: {{book.author}}
+						<b>Author:</b> {{book.author}}
 					</li>
 					<li class="list-group-item">
-						Publisher: {{
+						<b>Publisher:</b> {{
 							book.publisher
 						}}
 					</li>
 					<li class="list-group-item">
-						Pages: {{book.pages}}	
+						<b>Pages:</b> {{book.pages}}	
 					</li>
 
 				</ul>
 			</div>
 		</div>
 		
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-12">
+			<a href="#!/books" class="btn btn-primary">Back</a>	
+			<a href="#!/books/edit/{{book._id}}" class="btn btn-primary pull-right">Edit</a>
+			<a href="#" ng-click="deleteBook(book._id)" class="btn btn-primary pull-right">Delete</a>	
 	</div>
 </div>
